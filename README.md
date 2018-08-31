@@ -1,4 +1,5 @@
-# CMSC389Q: iOS APP Development
+# CMSC389Q: iOS App Development
+![Imgur](https://i.imgur.com/iwa9qEG.jpg)
 
 ## Course Description
 This course provides a comprehensive, practical introduction to iOS mobile app development. We will be using the swift language along with the Xcode IDE to develop the applications following the MVC design pattern. In the beginning of the course we will begin by learning how to develop scalable user interfaces in the Xcode Interface Builder as well as controlling the interface using outlets. We will then progress by learning how to ingest and model data from a REST API and how to display this data to the user. Lastly, throughout the course we will be breaking down current iOS apps available on the app store and learning how we can create the same application. By the end of the course, we hope students are capable of developing and publishing their own apps to the Apple app store.

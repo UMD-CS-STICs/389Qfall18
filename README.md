@@ -20,38 +20,38 @@ and [Travis Ho](https://www.linkedin.com/in/travis-ho-19a2a3127)
 
 ## Topics Covered
 - Xcode 10
-    - Creating a project
-    - Navigating and interacting with Xcode
-    - Interface Builder
-        - Creating an interface using UIKit components
-        - Using Autolayout to create scalable user interfaces
-        - Setting up the flow of the application using segues
-    - Running an application on your personal device and on provided simulator
-    - Preparing the application for app store release
+- Creating a project
+- Navigating and interacting with Xcode
+- Interface Builder
+- Creating an interface using UIKit components
+- Using Autolayout to create scalable user interfaces
+- Setting up the flow of the application using segues
+- Running an application on your personal device and on provided simulator
+- Preparing the application for app store release
 
 - Swift 4
-    - Variables, data types, optionals
-    - Conditionals, iteration, statments
-    - Functions and completion handlers
-    - Protocols and Delegates
-    - IBOutlets and IBActions
-    - MVC design architecture
-        - Deciding what tasks can be performed in the view controller
-        - How to setup communication between your models and your controller
-        - How the view and the view controller communicate
-    - REST API
-        - Creating HTTP Requests
-        - Ingesting and modeling data from a REST API
-        - Preventing thread issues
-    - Persisting data
-        - Using Core Data
-        - Using UserDefaults
-    - Cocoapods
-        - How to install cocoapods into your project.
-        - Examples of cocoapods you may find helpful
-    - Advanced Frameworks
-        - CoreML
-        - ARKit 2
+- Variables, data types, optionals
+- Conditionals, iteration, statments
+- Functions and completion handlers
+- Protocols and Delegates
+- IBOutlets and IBActions
+- MVC design architecture
+- Deciding what tasks can be performed in the view controller
+- How to setup communication between your models and your controller
+- How the view and the view controller communicate
+- REST API
+- Creating HTTP Requests
+- Ingesting and modeling data from a REST API
+- Preventing thread issues
+- Persisting data
+- Using Core Data
+- Using UserDefaults
+- Cocoapods
+- How to install cocoapods into your project.
+- Examples of cocoapods you may find helpful
+- Advanced Frameworks
+- CoreML
+- ARKit 2
 
 ## Grading
 Grades will be maintained on the CS Department
@@ -87,8 +87,8 @@ afterwards.
 | 10 (11/2) | Advanced Swift Topics | HW6 DUE, HW7 TBD OUT |
 | 11 (11/9) | Publishing App| HW7 Due, HW8 TBD OUT |
 | 12 (11/16) |  Requested Topic|HW8 DUE, FINAL OUT |
-| 13 (11/23) | THANKSGIVING BREAK 
-| 14 (11/30) | Requested Topic | 
+| 13 (11/23) | THANKSGIVING BREAK
+| 14 (11/30) | Requested Topic |
 | 15 (12/7) | Presentations | Final Project DUE |
 
 ## Assignments/Projects
@@ -152,4 +152,5 @@ If you have a suggestion for improving this class, don't hesitate to tell the
 instructor or TAs during the semester. At the end of the semester, please don't
 forget to provide your feedback using the campus-wide CourseEvalUM system. Your
 comments will help make this class better.
+
 

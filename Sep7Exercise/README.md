@@ -1,9 +1,10 @@
 # September 7 Exercise: Tinder Profile Page
+![Imgur](https://i.imgur.com/L2hQUub.png)
 
 ## Instructions
 How to get setup:
 
-1. Download the Sep7Exercise folder contents from github.
+1. Clone the repository and go to the Sep7Exercise folder.
 2. Create a Figma Account and View the Tinder design at [Figma](https://www.figma.com/file/S2CvHqP1e6N14LMUdjOjgIxf/Untitled?node-id=0%3A1).
 3. Create a new blank Xcode Project.
 

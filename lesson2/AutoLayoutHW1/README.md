@@ -1,4 +1,4 @@
-For this assigment, we will be creating a mock bank view UI. The design is included as an image in the Screenshots folder. Just try your best to mock this layout in your storyboard!
+For this assigment, we will be creating a mock bank view UI. The design is included as an image in the Screenshots folder. Just try your best to mock this layout in your storyboard! You can find the Figma design here: [Figma](https://www.figma.com/file/DglT1B3C9P1Yf1ag4lkk6LgM/HW1-Bank-App?node-id=0%3A1).
 
 ![Imgur](https://i.imgur.com/a1i7dF1.png)
 

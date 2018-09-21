@@ -13,7 +13,7 @@
 		0CCA51E721555DFF00B4D8E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0CCA51E621555DFF00B4D8E6 /* Assets.xcassets */; };
 		0CCA51EA21555DFF00B4D8E6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CCA51E821555DFF00B4D8E6 /* LaunchScreen.storyboard */; };
 		0CCA51F221555F2600B4D8E6 /* SecondVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CCA51F121555F2600B4D8E6 /* SecondVC.swift */; };
-		0CCA51F62155627800B4D8E6 /* FirstVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CCA51F52155627800B4D8E6 /* FirstVC.swift */; };
+		26456BDF215564B5000265CC /* FirstVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26456BDE215564B5000265CC /* FirstVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +25,7 @@
 		0CCA51E921555DFF00B4D8E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0CCA51EB21555DFF00B4D8E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0CCA51F121555F2600B4D8E6 /* SecondVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondVC.swift; sourceTree = "<group>"; };
-		0CCA51F52155627800B4D8E6 /* FirstVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstVC.swift; sourceTree = "<group>"; };
+		26456BDE215564B5000265CC /* FirstVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,7 +42,6 @@
 		0CCA51D021555DFE00B4D8E6 = {
 			isa = PBXGroup;
 			children = (
-				0CCA51F52155627800B4D8E6 /* FirstVC.swift */,
 				0CCA51DB21555DFF00B4D8E6 /* ProtocolExample */,
 				0CCA51DA21555DFF00B4D8E6 /* Products */,
 			);
@@ -66,6 +65,7 @@
 				0CCA51E821555DFF00B4D8E6 /* LaunchScreen.storyboard */,
 				0CCA51EB21555DFF00B4D8E6 /* Info.plist */,
 				0CCA51E321555DFF00B4D8E6 /* ProtocolExample.xcdatamodeld */,
+				26456BDE215564B5000265CC /* FirstVC.swift */,
 			);
 			path = ProtocolExample;
 			sourceTree = "<group>";
@@ -143,7 +143,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0CCA51E521555DFF00B4D8E6 /* ProtocolExample.xcdatamodeld in Sources */,
-				0CCA51F62155627800B4D8E6 /* FirstVC.swift in Sources */,
+				26456BDF215564B5000265CC /* FirstVC.swift in Sources */,
 				0CCA51F221555F2600B4D8E6 /* SecondVC.swift in Sources */,
 				0CCA51DD21555DFF00B4D8E6 /* AppDelegate.swift in Sources */,
 			);

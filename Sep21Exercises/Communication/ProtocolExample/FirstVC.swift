@@ -2,7 +2,7 @@
 //  FirstVC.swift
 //  ProtocolExample
 //
-//  Created by Tamer Bader on 9/21/18.
+//  Created by CMSC389Q on 9/21/18.
 //  Copyright © 2018 TamerBader. All rights reserved.
 //
 
@@ -15,10 +15,10 @@ class FirstVC: UIViewController {
 
         // Do any additional setup after loading the view.
     }
-    
+
     @IBAction func didTapNext(_ sender: UIButton) {
         
     }
     
-    
+
 }

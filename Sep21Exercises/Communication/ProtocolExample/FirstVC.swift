@@ -17,6 +17,7 @@ class FirstVC: UIViewController {
     }
 
     @IBAction func didTapNext(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "goToSecondView", sender: nil)
         
     }
     

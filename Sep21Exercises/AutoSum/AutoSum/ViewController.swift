@@ -9,12 +9,17 @@
 import UIKit
 
 // extend UITextFieldDelegate
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
     
     //Drag outlets for text field, and both display labels here
-
+    @IBOutlet weak var textField: UITextField!
+    @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var countLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        textField.delegate = self
+        textField.becomeFirstResponder()
         // set UITextFieldDelegate
         // add selector target for textFieldDidChange
     }
@@ -24,6 +29,11 @@ class ViewController: UIViewController {
         // update labels
     }
      */
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
     
     
 }

@@ -11,7 +11,7 @@ One task, will be displayed in one tableview cell. It can be one of three catego
 For Regular Credit:
 1. Create the layout for the tableview cell- [design](https://www.figma.com/file/PAVbt1sKIGChC8qzbjKa7smC/Task-Cell?node-id=0%3A1). 
 2. Make the custom tableview cell class (Tip: make sure you add the classname and reuse identifier in storyboard)
-3. Implement the delegate functions, to make the tableview return the predefined list of 5 tasks, and display your custom view cells. Based on the task category, display a different colored 'marker' on the left of the cell. Math is red, Science is yellow, and English is blue. 
+3. Implement the delegate functions, to make the tableview return the predefined list of 5 tasks, and display your custom view cells. Based on the task category, display a different colored 'marker' on the left of the cell. Math is red, Science is green, and English is blue. 
 
 For Extra Credit:
 

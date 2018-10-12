@@ -20,6 +20,8 @@ class MainVC: UIViewController {
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     
+    var counter: Int = 5;
+    
     var darkBackgroundColor: UIColor = UIColor(red: 34/255, green: 35/255, blue: 38/255, alpha: 1)
     
     override func viewDidLoad() {

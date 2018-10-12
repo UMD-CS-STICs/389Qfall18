@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="45F-JO-HVe">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Example Table-->
+        <scene sceneID="ioE-hs-Ugh">
+            <objects>
+                <tableViewController title="Example Table" id="45F-JO-HVe" customClass="TableViewController" customModule="TableViewExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="yd7-BB-D0B">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="IKH-E9-qcJ">
+                            <rect key="frame" x="0.0" y="72" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add ToDo item..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BVh-Pu-Nf4">
+                                    <rect key="frame" x="12" y="7" width="351" height="30"/>
+                                    <nil key="textColor"/>
+                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </textField>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="BVh-Pu-Nf4" secondAttribute="trailing" constant="12" id="3nG-Oo-Lgp"/>
+                                <constraint firstItem="BVh-Pu-Nf4" firstAttribute="leading" secondItem="IKH-E9-qcJ" secondAttribute="leading" constant="12" id="RQ5-9J-2sS"/>
+                                <constraint firstItem="BVh-Pu-Nf4" firstAttribute="centerY" secondItem="IKH-E9-qcJ" secondAttribute="centerY" id="w9i-t3-53i"/>
+                            </constraints>
+                        </view>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="tableViewCell" id="lT5-Bc-U4D" customClass="TableViewCell" customModule="TableViewExample" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lT5-Bc-U4D" id="KlC-CB-qsU">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="M6W-cR-t4m">
+                                            <rect key="frame" x="354" y="10" width="9" height="24"/>
+                                            <nil key="textColor"/>
+                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                        </textField>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ryg-R0-m7X">
+                                            <rect key="frame" x="12" y="9" width="26.5" height="26.5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="ryg-R0-m7X" secondAttribute="height" multiplier="1:1" id="l3W-UO-XRv"/>
+                                            </constraints>
+                                            <connections>
+                                                <action selector="tapCheckButton:" destination="lT5-Bc-U4D" eventType="touchUpInside" id="WZR-iv-lKc"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="ryg-R0-m7X" firstAttribute="centerY" secondItem="KlC-CB-qsU" secondAttribute="centerY" id="0im-R7-4Gc"/>
+                                        <constraint firstItem="ryg-R0-m7X" firstAttribute="height" secondItem="KlC-CB-qsU" secondAttribute="height" multiplier="3:5" id="2cK-y4-2pB"/>
+                                        <constraint firstItem="ryg-R0-m7X" firstAttribute="leading" secondItem="KlC-CB-qsU" secondAttribute="leading" constant="12" id="GHC-fh-Nmi"/>
+                                        <constraint firstAttribute="trailing" secondItem="M6W-cR-t4m" secondAttribute="trailing" constant="12" id="kYl-aJ-4Zj"/>
+                                        <constraint firstItem="M6W-cR-t4m" firstAttribute="centerY" secondItem="KlC-CB-qsU" secondAttribute="centerY" id="v3D-I4-ZBz"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="checkButton" destination="ryg-R0-m7X" id="INN-BL-30b"/>
+                                    <outlet property="textField" destination="M6W-cR-t4m" id="Bh7-c3-GDA"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="45F-JO-HVe" id="8yE-sk-LcZ"/>
+                            <outlet property="delegate" destination="45F-JO-HVe" id="wcf-fO-CO2"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="addTextField" destination="BVh-Pu-Nf4" id="3Xr-Qg-IP8"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zRr-wF-bgv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="804" y="133"/>
+        </scene>
+    </scenes>
+</document>

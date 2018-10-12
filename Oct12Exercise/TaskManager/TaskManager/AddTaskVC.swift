@@ -41,21 +41,6 @@ class AddTaskVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource 
         }
         
         
-        NetworkManager.sharedInstance.addTask(taskTitle: taskTitle, taskCategory: taskCategoryString)
-        
-        /*guard let taskCategory: Category = Category(rawValue: taskCategoryString) else {
-            return
-        }*/
-        
-        /*// Add the Task To Previous VC using protocol and delegate
-        let newTask: Task = Task(withTitle: taskTitle, withCategory: taskCategory)
-        
-        delegate?.addTask(newTask: newTask)
-        // Reset the Form
-        taskTitleField.text = ""
-        taskCategoryField.text = ""*/
-        
-        
     }
     
     // Delegate and Data Source

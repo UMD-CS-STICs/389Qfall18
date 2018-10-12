@@ -32,17 +32,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     override func viewWillAppear(_ animated: Bool) {
         // Gets the latest Tasks And Updates the TableView
-        NetworkManager.sharedInstance.getTasks { (requestStatus, tasks) in
-            if (requestStatus == .SUCCESS) {
-                self.task = tasks!
-                
-                // Must Hop onto Main Thread In Order To Reload TableView
-                OperationQueue.main.addOperation {
-                    self.taskTable.reloadData()
-                    self.numTaskLabel.text = "\(self.task.count)"
-                }
-            }
-        }
+        
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

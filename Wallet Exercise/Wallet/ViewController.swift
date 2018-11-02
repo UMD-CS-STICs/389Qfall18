@@ -16,7 +16,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var cardNumberField: UITextField!
     @IBOutlet weak var cardExpirationField: UITextField!
     @IBOutlet weak var cardTable: UITableView!
+    @IBOutlet weak var addCardViewBottom: NSLayoutConstraint!
     
+    @IBOutlet weak var overlayView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,7 +33,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         cardNumberField.delegate = self
         cardExpirationField.delegate = self
-        
+        addCardViewBottom.constant = -addCardView.frame.height
+        overlayView.isUserInteractionEnabled = false
+        //overlayView.addGestureRecognizer(<#T##gestureRecognizer: UIGestureRecognizer##UIGestureRecognizer#>)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -49,10 +53,19 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     @IBAction func didTapAddBarButton(_ sender: UIBarButtonItem) {
         // TODO: Handle Add From Bar Button
+        UIView.animate(withDuration: 0.5) {
+            self.addCardViewBottom.constant = 0
+            self.overlayView.alpha = 0.7
+        }
     }
     
     @IBAction func didTapAddToWallet(_ sender: UIButton) {
         // TODO: Handle Add Card To Wallets
+        
+        UIView.animate(withDuration: 0.5) {
+            self.addCardViewBottom.constant = -self.addCardView.frame.height
+            self.overlayView.alpha = 0
+        }
         
         guard let cardText: String = cardNumberField.text else {
             return
@@ -78,12 +91,15 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         self.cardTable.reloadData()
     }
     
+    @IBAction func tapCell(_ sender: UIButton) {
+        print("ME")
+    }
     func stringifyCardNumber(cardNum: Int) -> String {
         let cardString: String = "\(cardNum)"
         var currCharCount = 1;
         var cardNewString: String = ""
-        for letter in cardString.characters {
-            if (currCharCount % 5 == 0 && currCharCount != cardString.characters.count) {
+        for letter in cardString {
+            if (currCharCount % 5 == 0 && currCharCount != cardString.count) {
                 cardNewString += "-\(letter)"
                 currCharCount += 1
             } else {

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14295.6" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="iRO-sB-W4k">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="iRO-sB-W4k">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14270.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -46,6 +46,14 @@
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
+                                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F88-VL-cuN">
+                                                            <rect key="frame" x="139" y="22" width="46" height="30"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <state key="normal" title="Button"/>
+                                                            <connections>
+                                                                <action selector="tapCell:" destination="BYZ-38-t0r" eventType="touchUpInside" id="g66-YO-wBA"/>
+                                                            </connections>
+                                                        </button>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
@@ -74,6 +82,10 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Ia-h2-lw6" userLabel="Overlay View">
+                                <rect key="frame" x="0.0" y="64" width="375" height="389.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sd9-Lx-wsE">
                                 <rect key="frame" x="0.0" y="453.5" width="375" height="213.5"/>
                                 <subviews>
@@ -149,9 +161,13 @@
                             <constraint firstItem="gDW-rQ-UkK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="3h9-BP-xUW"/>
                             <constraint firstItem="Sd9-Lx-wsE" firstAttribute="top" secondItem="gDW-rQ-UkK" secondAttribute="bottom" id="5qt-OH-G50"/>
                             <constraint firstItem="Sd9-Lx-wsE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="HFg-jR-1lB"/>
+                            <constraint firstItem="2Ia-h2-lw6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Ly7-fM-1BC"/>
+                            <constraint firstItem="2Ia-h2-lw6" firstAttribute="bottom" secondItem="gDW-rQ-UkK" secondAttribute="bottom" id="SJn-zD-GRZ"/>
                             <constraint firstItem="gDW-rQ-UkK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="SjJ-0f-6Ep"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Sd9-Lx-wsE" secondAttribute="bottom" id="hFG-Hf-hyK"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gDW-rQ-UkK" secondAttribute="trailing" id="rfJ-7N-st8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2Ia-h2-lw6" secondAttribute="trailing" id="uQC-A1-nr9"/>
+                            <constraint firstItem="2Ia-h2-lw6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="y3L-ZU-NXQ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Sd9-Lx-wsE" secondAttribute="trailing" id="yHf-n6-pWg"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -165,9 +181,11 @@
                     </navigationItem>
                     <connections>
                         <outlet property="addCardView" destination="Sd9-Lx-wsE" id="iaM-cE-4CA"/>
+                        <outlet property="addCardViewBottom" destination="hFG-Hf-hyK" id="86Y-6j-CGO"/>
                         <outlet property="cardExpirationField" destination="zXf-BM-hcx" id="u2g-e9-gjO"/>
                         <outlet property="cardNumberField" destination="BbX-cR-lSJ" id="Jzz-Hh-rYx"/>
                         <outlet property="cardTable" destination="gDW-rQ-UkK" id="bEa-Dd-ODg"/>
+                        <outlet property="overlayView" destination="2Ia-h2-lw6" id="j8Z-iT-yrJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

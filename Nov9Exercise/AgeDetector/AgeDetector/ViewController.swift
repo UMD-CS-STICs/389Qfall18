@@ -8,7 +8,6 @@
 
 import UIKit
 import AVFoundation
-import Vision
 
 class ViewController: UIViewController {
     
@@ -18,13 +17,17 @@ class ViewController: UIViewController {
     var videoPreviewLayer: AVCaptureVideoPreviewLayer?
     var capturePhotoOutput: AVCapturePhotoOutput?
     var timer = Timer()
+    
+    var doYouHaveAiPhone: Bool = true
 
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        setupCamera()
+        if (doYouHaveAiPhone) {
+            setupCamera()
+        }
         scheduledTimerWithTimeInterval()
         
     }
@@ -83,6 +86,11 @@ class ViewController: UIViewController {
     }
     
     func scheduledTimerWithTimeInterval(){
+        if (!doYouHaveAiPhone) {
+            let uploadedImage: UIImage = UIImage(named: "satya")!
+            let cimage: CIImage = CIImage(image: uploadedImage)!
+            detectAge(image: cimage)
+        }
         // Scheduling timer to Call the function "updateCounting" with the interval of 1 seconds
         timer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(ViewController.takePhoto), userInfo: nil, repeats: true)
     }
@@ -112,9 +120,10 @@ extension ViewController : AVCapturePhotoCaptureDelegate {
         // Initialise an UIImage with our image data
         let capturedImage = UIImage.init(data: imageData , scale: 1.0)
         if let image = capturedImage {
-            var cimage: CIImage = CIImage(image: image)!
+            let cimage: CIImage = CIImage(image: image)!
             detectAge(image: cimage)
         }
     }
 }
+
 

@@ -14,25 +14,59 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var mapView: MKMapView!
     
+    var locationManager: CLLocationManager = CLLocationManager()
+    let regionDistance: Double = 10
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        checkLocationServicesEnabled()
     }
     
     func checkLocationServicesEnabled() {
         // We will be checking if Location Services on device are enabled
+        let isEnabled: Bool = CLLocationManager.locationServicesEnabled()
+        if (isEnabled) {
+            setupLocationManager()
+            checkLocationAuth()
+        } else {
+            //
+            print("Show Error")
+        }
     }
     
     func checkLocationAuth() {
-        // Checking if the app has permission to get location
+        let authStatus = CLLocationManager.authorizationStatus()
+        
+        switch authStatus {
+        case .authorizedAlways:
+            break
+        case .authorizedWhenInUse:
+            mapView.showsUserLocation = true
+            centerOnUserLocation()
+        case .denied:
+            break
+        case .notDetermined:
+            locationManager.requestWhenInUseAuthorization()
+            break
+        case .restricted:
+            break
+        }
     }
     
     // Setup the Location Manager
     func setupLocationManager() {
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
     }
     
     func centerOnUserLocation() {
         // Take the users location and center into the region
+        
+        if let location = locationManager.location?.coordinate {
+            let region = MKCoordinateRegionMakeWithDistance(location, regionDistance, regionDistance)
+            mapView.region = region
+        }
     }
     
     
@@ -44,10 +78,22 @@ class ViewController: UIViewController {
 extension ViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         // Handle User Location Updates
+        
     }
     
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         // Handle Auth Change
+        
+        switch status {
+        case .authorizedWhenInUse:
+            mapView.showsUserLocation = true
+            centerOnUserLocation()
+        default:
+            print("Error")
+            break
+        }
+        
+        
     }
 }
 

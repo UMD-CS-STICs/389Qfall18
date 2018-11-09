@@ -27,11 +27,17 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         taskOverviewView.layer.borderColor = UIColor.blue.cgColor
         //resetDefaults()
         loadData()
-        numTaskLabel.text = "\(tasks.count)"
-    }
+        }
     
     func loadData() {
         // implement setting tasks from UserDefaults
+        guard let tasksData = UserDefaults.standard.object(forKey: "tasks") as? NSData else {
+            return
+        }
+        if let tasks = NSKeyedUnarchiver.unarchiveObject(with: tasksData as Data) as? [Task] {
+            self.tasks = tasks
+        }
+        numTaskLabel.text = "\(tasks.count)"
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -80,6 +86,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func saveTasks() {
         // implement saving tasks to UserDefaults
+        let taskData = NSKeyedArchiver.archivedData(withRootObject: self.tasks)
+        UserDefaults.standard.set(taskData, forKey: "tasks")
     }
     
     func addTask(newTask: Task) {

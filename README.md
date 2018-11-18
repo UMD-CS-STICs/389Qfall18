@@ -66,8 +66,8 @@ percentages:
 | Percentage | Title | Description |
 | ------------- | -----|-------- |
 | 40% | Weekly HW  | Weekly assignments that can take the form of small projects or ELMS quizzes. |
-| 20% | Midterm | An individual project where you create your own app using topics and features learned from previous lectures   |
-| 25% | Final Project | An iOS app that uses everything you've learned in the semester. You may work in groups on this. |
+| 30% | Midterm | An individual project where you create your own app using topics and features learned from previous lectures   |
+| 30% | Final Project | An iOS app that uses everything you've learned in the semester. You may work in groups on this. |
 
 Any request for reconsideration of any grading on coursework must be submitted
 within one week of when it is returned. No requests will be considered

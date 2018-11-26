@@ -57,6 +57,7 @@ Points | Topic
 
 Points | Topic 
 --- | ---
+6 | Take other people's quizzes! 
 20 | Surprise me!
 
 We've placed TODO's around the project. You can use the 'search' feature in the editor to find them.
@@ -76,5 +77,7 @@ Create the UI in storyboard. Use the screeshots & video for reference.
 
 _AddUserVC_<br/>
 Install [Cocoapod](https://github.com/hyperoslo/BarcodeScanner) for scanning Barcode. You'll need a physical device to test the scanner. However, we've included the Barcode code, so if you've installed the pod correctly and your code compiles, it should be correct. TextFieldDelegate return function starts the quiz for the entered user.
+
+Extra credit: We'll give 3 points for taking the quiz of another student in the class, for a max of 6 points! We'll have time for the last two days of class to do this.
 
 Note: We've implemented Firebase functions that log who's taken your quiz, and the quizzes you've taken for other people. Feel free to use these in your extra credit!

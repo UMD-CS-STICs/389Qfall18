@@ -9,6 +9,11 @@
 import UIKit
 
 class IntroPreQuestionVC: UIViewController {
+    
+    // NOTE: This is the greetings page before a user starts the quiz.
+    // It has two modes, 1. PROFILE for when you're taking your own quiz and 2. FRIEND
+    // for when you're taking a friend's quiz.
+    
     @IBOutlet weak var welcomeLabel: UILabel!
     @IBOutlet weak var startButton: UIButton!
     @IBOutlet weak var startButtonSuperView: UIView!

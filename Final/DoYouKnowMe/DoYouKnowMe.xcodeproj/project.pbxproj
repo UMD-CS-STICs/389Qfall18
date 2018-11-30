@@ -25,7 +25,6 @@
 		4D1D8F46B63BBBEA4361A309 /* Pods_DoYouKnowMe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCB1CD6833EB2729F8D3D246 /* Pods_DoYouKnowMe.framework */; };
 		AE014F8521A9F2A700EF0874 /* FirebaseConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE014F8421A9F2A700EF0874 /* FirebaseConnector.swift */; };
 		AE014F8721A9FEDB00EF0874 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AE014F8621A9FEDB00EF0874 /* GoogleService-Info.plist */; };
-		AE014F9121AA4C6F00EF0874 /* QuizEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE014F9021AA4C6F00EF0874 /* QuizEntry.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,7 +48,6 @@
 		93F295E6D48DB4FF52A10F52 /* Pods-DoYouKnowMe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoYouKnowMe.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DoYouKnowMe/Pods-DoYouKnowMe.debug.xcconfig"; sourceTree = "<group>"; };
 		AE014F8421A9F2A700EF0874 /* FirebaseConnector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseConnector.swift; sourceTree = "<group>"; };
 		AE014F8621A9FEDB00EF0874 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		AE014F9021AA4C6F00EF0874 /* QuizEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizEntry.swift; sourceTree = "<group>"; };
 		DA17642728CAD3D2D29A9556 /* Pods-DoYouKnowMe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoYouKnowMe.release.xcconfig"; path = "Pods/Target Support Files/Pods-DoYouKnowMe/Pods-DoYouKnowMe.release.xcconfig"; sourceTree = "<group>"; };
 		FCB1CD6833EB2729F8D3D246 /* Pods_DoYouKnowMe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DoYouKnowMe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -100,7 +98,6 @@
 				0CFE7B3A21A8FE5F005ED54E /* GameOptionCell.swift */,
 				0CFE7B3C21A905AA005ED54E /* UIColor+Extension.swift */,
 				0CFE7B3E21A9084B005ED54E /* Question.swift */,
-				AE014F9021AA4C6F00EF0874 /* QuizEntry.swift */,
 			);
 			path = DoYouKnowMe;
 			sourceTree = "<group>";
@@ -274,7 +271,6 @@
 				0C89975721ABB0350076D556 /* GameOverVC.swift in Sources */,
 				0C89975321AA5C2F0076D556 /* QRProvider.swift in Sources */,
 				0C89975521ABA9310076D556 /* AddUserVC.swift in Sources */,
-				AE014F9121AA4C6F00EF0874 /* QuizEntry.swift in Sources */,
 				0CFE7B3D21A905AA005ED54E /* UIColor+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -16,7 +16,7 @@ class User {
     
     static func getCurrentUsername() -> String? {
         // TODO: Retreive Username from UserDefaults
-        return ""
+        return nil
     }
     
     // For testing. Call it to get rid of current saved username

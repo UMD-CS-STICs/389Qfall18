@@ -24,9 +24,8 @@ class FirebaseConnector {
             var questions: Array<Question> = []
             if let arr = json.array {
                 arr.forEach({ (jsonObj) in
-                    // The values on the JSON obj:
                     print("question: \(jsonObj["question"].stringValue), answer1: \(jsonObj["answer1"].stringValue), answer2: \(jsonObj["answer2"].stringValue), answer3: \(jsonObj["answer3"].stringValue), answer4: \(jsonObj["answer4"].stringValue)")
-                    // TODO: input correct values into Question's constructor.
+                    // TODO: input correct values into Question's constructor. The jsonObj is the resulting object from the query to the database.
                     let question = Question()
                     questions.append(question)
                 })
@@ -63,29 +62,8 @@ class FirebaseConnector {
         }
     }
     
-    func getQuizzesTaken(userID: String, completion: @escaping(Array<QuizEntry>) -> ()) {
-        db.reference(withPath: "users").child(userID).child("quiz-taken-log").observe(.value) { (snap) in
-            if (snap.value is NSNull) {
-                completion([])
-                return
-            }
-            var quizEntries: Array<QuizEntry> = []
-            let json = JSON(snap.value!)
-            for (key, jsonObj) in json {
-                let quizEntry = QuizEntry.init(username: key, score: jsonObj.string!)
-                quizEntries.append(quizEntry)
-            }
-            completion(quizEntries)
-        }
-    }
-    
     func updateUserAnswers(userID: String, answers: Array<String>) {
         db.reference(withPath: "users").child(userID).updateChildValues(["default-quiz-answers" : answers])
-    }
-    
-    func updateQuizLogs(userID: String, friendID: String, score: String) {
-        db.reference(withPath: "users").child(userID).child("quiz-taken-log").updateChildValues([friendID : score])
-        db.reference(withPath: "users").child(friendID).child("quiz-log").updateChildValues([userID : score])
     }
     
     func containsUser(userID: String, completion: @escaping(Bool) -> ()) {

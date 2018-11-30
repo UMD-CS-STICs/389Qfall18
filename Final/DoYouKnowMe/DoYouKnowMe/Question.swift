@@ -9,5 +9,10 @@
 import Foundation
 
 class Question {
-    // TODO: Implement what a 'Question' should look like, and it's constructor. You may look at QuizEntry for inspiration.
+    
+    // Add question vars here. Think, what data does a Question consist of?
+    
+    init () {
+        // TODO: Initialize Question members here
+    }
 }

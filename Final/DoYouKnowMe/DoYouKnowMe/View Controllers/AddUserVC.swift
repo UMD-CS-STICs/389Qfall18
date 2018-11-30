@@ -9,6 +9,9 @@
 import UIKit
 
 class AddUserVC: UIViewController {
+    
+    // NOTE: This screen has a textfield for inputting a friend's username, and a button that opens the QR scanner on your camera.
+    // Two parts have not been implemented on this screen. 1. Upon hitting enter in the userIDField it should call startQuiz(username) with the text input. 2. clicking the barcode scanner button does not open the barcode VC.
 
     @IBOutlet weak var userIDField: UITextField!
     @IBOutlet weak var scanButton: UIButton!
@@ -18,15 +21,20 @@ class AddUserVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Setup the TextField
-        // TODO: Textfield delegate
+        // TODO: set the userIDField's delegate
+        
         userIDField.attributedPlaceholder = NSAttributedString(string:"Enter Users Directory ID", attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
         // Show the keyboard
         userIDField.becomeFirstResponder()
     }
     
     @IBAction func didTapScan(_ sender: UIButton) {
-        // TODO: open Barcode Scanner VC. Make sure to install the Cocoapod. Documentation: https://github.com/hyperoslo/BarcodeScanner
+        // TODO: Install the BarcodeScanner Cocoapod: https://github.com/hyperoslo/BarcodeScanner
+        // Then, uncomment the code below and at the bottom of the file. This creates the Barcode VC, sets its delegate functions, and presents it.
+//        let controller: BarcodeScannerViewController = BarcodeScannerViewController()
+//        controller.codeDelegate = self
+//        controller.dismissalDelegate = self
+//        self.present(controller, animated: true, completion: nil)
     }
     
     @IBAction func didTapBack(_ sender: UIButton) {
@@ -59,9 +67,8 @@ class AddUserVC: UIViewController {
     }
 }
 
-// TODO: TextFieldDelegate shouldReturn function, passes correct variable to startQuiz. IntroUsernameVC may inspire you.
+// TODO: Implement the TextFieldDelegate's 'should return' function
 
-//Barcode scanner delegate code:
 //extension AddUserVC: BarcodeScannerCodeDelegate, BarcodeScannerDismissalDelegate {
 //    func scanner(_ controller: BarcodeScannerViewController, didCaptureCode code: String, type: String) {
 //        startQuiz(username: code)

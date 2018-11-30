@@ -9,6 +9,11 @@
 import UIKit
 
 class QuizGameVC: UIViewController {
+    
+    // NOTE: This is the Quiz game screen! It pulls from Firebase to get an array of questions.
+    // Each question has a question text, and four answer texts.
+    // The two parts that have not been implemented yet are 1. On the answer table view cells, the text is not set and 2. Tapping the 'continue' button does nothing!
+    
     @IBOutlet weak var questionCardView: UIView!
     @IBOutlet weak var questionStatusLabel: UILabel!
     @IBOutlet weak var questionLabel: UILabel!
@@ -44,12 +49,16 @@ class QuizGameVC: UIViewController {
     }
     
     @IBAction func didTapContinue(_ sender: UIButton) {
-        // TODO: build answers array. Iterate through Questions array. Call finishQuiz() when the quiz is over.
+        // TODO: upon tapping continue, we want to do three things.
+        // 1. Move on to the next question, so this means incrementing our counter (currQuestionNumber) and looking at the correct Question in our Question array.
+        // 2. Check to see if we have finished all of our questions. If we have, then call the finishQuiz() method.
+        // 3. Add the selected answer to our answers array. Our answers array will look something like this: ["answer1", "answer3", "answer1",...] where answer1 is the first choice, answer3 is the third choice, etc. You can print from the calculateScore() function to see what a sample answers array looks like if you are still confused.
+        
         print("selected cell: \(self.selectedCellIndexPath!.row)") // currently selected cell index, set as global in 'didSelectRowAt' method
     }
     
     func generateTestQuestions() {
-        // TODO: In FirebaseConnector's getDefaultQuiz() function, we create the Question array. Once you've created your Question.swift, make sure to modify this function.
+        // NOTE: make sure to modify the getDefaultQuiz() function in FirebaseConnector.swift to get this function to work!
         FirebaseConnector().getDefaultQuiz { (questions) in
             self.questions = questions
         }
@@ -104,7 +113,7 @@ extension QuizGameVC: UITableViewDelegate, UITableViewDataSource {
         cell.optionSelectedView.layer.borderColor = UIColor.lightDYKMGray.cgColor
         cell.optionSelectedView.backgroundColor = UIColor.white
         
-        // TODO: optionCell Text
+        // TODO: Set the optionCell's text based on your questions array!
         
         cell.optionLabel.textColor = UIColor.darkDYKMGray
         cell.optionLabel.font = UIFont(name: "AvenirNext-Medium", size: 22)

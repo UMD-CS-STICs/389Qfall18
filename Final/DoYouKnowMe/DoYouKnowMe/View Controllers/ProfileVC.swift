@@ -9,6 +9,10 @@
 import UIKit
 
 class ProfileVC: UIViewController {
+    // NOTE: This view displays your QR code and your username.
+    // TODO: Just implement the UI in storyboard. We've included the code for setting the
+    // IDLabel to your username, and generating the QR code from your username, in the comments below.
+    // Make sure to re-connect the IBOutlets below to your views in storyboard.
 
 //    @IBOutlet weak var barcodeImageView: UIImageView!
 //    @IBOutlet weak var idLabel: UILabel!
